@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication42;
+
+import static java.time.Clock.system;
+
+import java.util.Scanner;
+/**
+ *
+ * @author STUDENT
+ */
+public class JavaApplication42 {
+    
+public static double cylinderVolume( double Dvalue, double Hvalue){
+    double bi = 22/7;
+    double r = Dvalue / 2; 
+      double Volume = bi*r*Hvalue;
+     return Volume;
+}
+    public static void main(String[] args) {
+       Scanner in=new Scanner(System.in);
+       double dvalue , Hvalue;
+       System.out.println("please enter the diamter ");
+       dvalue = in.nextDouble();
+       System.out.println("please enter the hight");
+       Hvalue = in.nextDouble();
+        System.out.println( cylinderVolume (dvalue , Hvalue) );
+        
+        
+    }
+    
+    
+            
+  
+}
