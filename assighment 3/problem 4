@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.mavenproject4;
+
+import java.util.Scanner;
+public class Mavenproject4 {
+
+  public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int largest = Integer.MIN_VALUE;
+        int smallest = Integer.MAX_VALUE;
+        int sum = 0;
+        int count = 0;
+        
+        System.out.print("Enter positive integers (enter 0 to stop): ");
+        int n = scanner.nextInt();
+        
+        while (n != 0) {
+            sum += n;
+            count++;
+            
+            if (n > largest) {
+                largest = n;
+            }
+            if (n < smallest) {
+                smallest = n;
+            }
+            
+            n = scanner.nextInt();
+        }
+        
+        if (count > 0) {
+            double average = (double) sum / count;
+            System.out.println("Largest number: " + largest);
+            System.out.println("Smallest number: " + smallest);
+            System.out.println("Average: " + average);
+        } else {
+            System.out.println("No numbers were entered.");
+        }
+        
+        scanner.close();
+    }
+}
